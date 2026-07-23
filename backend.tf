@@ -11,10 +11,10 @@ terraform {
   // Uncomment for remote state management
 
   backend "s3" {
-    bucket         = "terraform-state-bucket-6785"
-    key            = "keyfolder/terraform.tfstate"
-    region         = "ap-south-1"
-    dynamodb_table = "terraform-lock"
-    encrypt        = true
+    bucket       = "terraform-state-bucket-6785"
+    key          = "keyfolder/terraform.tfstate"
+    region       = "ap-south-1"
+    use_lockfile = "terraform-lock"
+    encrypt      = true
   }
 }
